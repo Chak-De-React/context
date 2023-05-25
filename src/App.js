@@ -13,15 +13,23 @@ const Smile = () => {
     return(
        <div>
           <PackageContext.Consumer>
-              {
-                (info) => (
-                  <div>
-                     <h1>
-                      Name of Cricketer:  {info.name}
-                     </h1>
-                  </div>
-                )
-              }
+           {
+             // info = cricketer
+            (info) => (
+                <div>
+                  <h2>Name: {info.data.name}</h2>
+                  <h4>Age: {info.data.age}</h4>
+
+                  <button
+                  onClick={()=>info.updateAge(80)}
+                  >Update Sachin Age</button>
+
+                  <h4>Country: {info.data.country}</h4>
+                  <h4>Highest Score: {info.data.highestScore}</h4>
+                  
+                </div>
+            )
+           }  
           </PackageContext.Consumer>
        </div>
     )
@@ -37,10 +45,27 @@ const App = () => {
             Hello , I am here
             <Provider>
                <Smile />
-            </Provider>
+             </Provider>
+            
         </div>
     )
 }
 
 export default App;
 
+
+
+
+/*
+create Context hook =>
+  1) Provider = value
+  2) Consumer = access value
+// all child component of provider can access value
+*/
+
+
+/* 
+
+
+
+*/

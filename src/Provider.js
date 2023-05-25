@@ -2,7 +2,7 @@
 import PackageContext from "./Context"
 import { useState } from "react"
 
-const Provider = ({children}) => {
+const Provider = (props) => {
    let [cricketer, setCricketer] = useState({
         name: "Sachin Tendulkar",
         age: 47,
@@ -13,10 +13,13 @@ const Provider = ({children}) => {
     return(
         <PackageContext.Provider
          value={
-            cricketer
+            {
+               data : cricketer, 
+               updateAge: (newAge)=>setCricketer({...cricketer, age: newAge})
+            }
          }
         >
-            {children}
+            {props.children}
         </PackageContext.Provider>
     )
 
