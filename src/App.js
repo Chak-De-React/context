@@ -7,6 +7,7 @@
 import React from "react"; 
 import  PackageContext from "./Context"
 import Provider from "./Provider";
+import Laugh from "./Laugh";
 
 
 const Smile = () => {
@@ -44,7 +45,8 @@ const App = () => {
         <div>
             Hello , I am here
             <Provider>
-               <Smile />
+                {/* <Smile /> */}
+                <Laugh />
              </Provider>
             
         </div>
@@ -68,4 +70,17 @@ create Context hook =>
 
 
 
+*/
+
+
+
+// Context
+
+
+/* 
+  1. => Careat a value like sachin age => update data froom one componet like Smile 
+  and access data from other component like Laugh
+
+  2. 
+       theme switcher but only for a div 
 */

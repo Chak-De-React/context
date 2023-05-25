@@ -6,3 +6,11 @@ const PackageContext = React.createContext()
 
 export  default PackageContext
 
+
+
+// let PackageContext = {
+    // {
+    //     data : cricketer, 
+    //     updateAge: (newAge)=>setCricketer({...cricketer, age: newAge})
+    //  }
+// }
